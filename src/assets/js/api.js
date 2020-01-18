@@ -1,156 +1,100 @@
-import {
-  get,
-  post,
-  put,
-  update,
-  deletes
-} from './http';
-import {
-  RSAencrypt1
-} from "../js/encrypt";
+import {get, post, put, update, deletes} from './http';
 
 //获取公钥
 const getPublicKey = async param => {
-  const res = await post("/common/getPublicKey", param);
-  return res.data
+  return await post("/common/getPublicKey", param);
 };
 
 // 注册
 const register = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/auth/register", param);
-  return res.data
+  return await post("/auth/register", param);
 };
 // 登录
 const login = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/auth/login", param);
-  return res.data
+  return await post("/auth/login", param);
 };
 // 验证码
 const sendCode = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/common/sendCode", param);
-  return res.data
+  return await post("/common/sendCode", param);
 };
 // 忘记密码
 const retrieve = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/auth/retrieve", param);
-  return res.data
+  return await post("/auth/retrieve", param);
 };
 // 我的详情
 const getUserInfo = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/user/info", param);
-  return res.data
+  return await post("/user/info", param);
 };
 // 我的好友
 const getFriend = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/friend/list", param);
-  return res.data
+  return await post("/friend/list", param);
 };
 // 我的群组
 const group = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/group/list", param);
-  return res.data
+  return await post("/group/list", param);
 };
 // 搜索用户
 const search = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/friend/search", param);
-  return res.data
+  return await post("/friend/search", param);
 };
 // 申请记录
 const record = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/apply/record", param);
-  return res.data
+  return await post("/apply/record", param);
 };
 // 好友申请
 const create = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/apply/create", param);
-  return res.data
+  return await post("/apply/create", param);
 };
 // 朋友圈
 const article = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/article/list", param);
-  return res.data
+  return await post("/article/list", param);
 };
 // 好友资料
 const friendInfo = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/friend/info", param);
-  return res.data
+  return await post("/friend/info", param);
 };
 // 审核申请
 const review = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/apply/review", param);
-  return res.data
+  return await post("/apply/review", param);
 };
 // 退出登录
 const logout = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/auth/logout", param);
-  return res.data
+  return await post("/auth/logout", param);
 };
 // 删除好友
 const removeBuddy = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/friend/delete", param);
-  return res.data
+  return await post("/friend/delete", param);
 };
 // 创建群组
 const buildingGroup = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/group/create", param);
-  return res.data
+  return await post("/group/create", param);
 };
 // 创建房间
 const roomCreate = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/room/create", param);
-  return res.data
+  return await post("/room/create", param);
 };
 // 更新个人资料
 const updateUserInfo = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/user/updateUserInfo", param);
-  return res.data
+  return await post("/user/updateUserInfo", param);
 };
 // 上传文件
 const upload = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/common/upload", param);
-  return res.data
+  return await post("/common/upload", param);
 };
 // 获取所有群成员
 const memberList = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/group/memberList", param);
-  return res.data
+  return await post("/group/memberList", param);
 };
 // 发布说说
 const articlePush = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/article/push", param);
-  return res.data
+
+  return await post("/article/push", param);
+
 };
 // 评论说说
 const comment = async param => {
-  // param=RSAencrypt1(param);
-  const res = await post("/article/comment", param);
-  return res.data
+  return await post("/article/comment", param);
 };
-
-
-
-
 
 
 export default {
